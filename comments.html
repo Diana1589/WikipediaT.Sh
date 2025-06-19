@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Коментарі — Тарас Шевченко</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0b1d3a;
+      color: #d6e3f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: #112b57;
+      padding: 18px 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+    }
+    nav .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f4d35e;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #f4d35e;
+      text-decoration: none;
+    }
+    nav a:hover { color: #ffc107; }
+
+    main {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #f4d35e;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    form {
+      background-color: #112b57;
+      padding: 25px 30px;
+      border-radius: 14px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.05);
+      margin-bottom: 40px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px 14px;
+      margin-top: 6px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1b3969;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #f4d35e;
+      color: #0b1d3a;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffc107;
+    }
+
+    .comment-list {
+      background-color: #112b57;
+      border-radius: 12px;
+      padding: 20px 25px;
+    }
+
+    .comment {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #334b6b;
+    }
+
+    .comment .name {
+      font-weight: bold;
+      color: #f4d35e;
+      margin-bottom: 5px;
+    }
+
+    .comment .text {
+      color: #e3efff;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #112b57;
+      padding: 20px;
+      text-align: center;
+      color: #a3b1d1;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      nav ul { gap: 12px; font-size: 0.9rem; }
+      nav { padding: 14px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Шевченко</div>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="biography.html">Біографія</a></li>
+      <li><a href="poetry.html">Поезія</a></li>
+      <li><a href="art.html">Мистецтво</a></li>
+      <li><a href="memory.html">Пам’ять</a></li>
+   
+      <li><a href="contacts.html">Контакти</a></li>
+      <li><a href="comments.html">Коментарі</a></li>
+      <li><a href="login.html">Увійти</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Коментарі</h1>
+
+    <form id="commentForm">
+      <label for="name">Ваше ім’я</label>
+      <input type="text" id="name" required />
+
+      <label for="comment">Ваш коментар</label>
+      <textarea id="comment" required></textarea>
+
+      <button type="submit">Надіслати</button>
+    </form>
+
+    <div class="comment-list" id="commentList">
+    
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Тарас Шевченко — Коментарі читачів
+  </footer>
+
+  <script>
+    const form = document.getElementById('commentForm');
+    const commentList = document.getElementById('commentList');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const comment = document.getElementById('comment').value.trim();
+
+      if (name && comment) {
+        const commentElement = document.createElement('div');
+        commentElement.classList.add('comment');
+        commentElement.innerHTML = `
+          <div class="name">${name}</div>
+          <div class="text">${comment}</div>
+        `;
+        commentList.prepend(commentElement); 
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>

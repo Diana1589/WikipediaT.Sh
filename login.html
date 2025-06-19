@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Увійти — Тарас Шевченко</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0b1d3a;
+      color: #d6e3f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: #112b57;
+      padding: 18px 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+    }
+    nav .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f4d35e;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #f4d35e;
+      text-decoration: none;
+    }
+    nav a:hover { color: #ffc107; }
+
+    #message {
+      display: none;
+      background-color: #28a745;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 0 20px 20px 20px;
+      border-radius: 8px;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .login-box {
+      background-color: #112b57;
+      padding: 40px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    }
+
+    .login-box h1 {
+      font-family: 'Playfair Display', serif;
+      color: #f4d35e;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .login-box label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px 14px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: none;
+      background-color: #1b3969;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .login-box input:focus {
+      outline: 2px solid #f4d35e;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #f4d35e;
+      color: #0b1d3a;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-box button:hover {
+      background-color: #ffc107;
+    }
+
+    .login-box .register-link {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .login-box .register-link a {
+      color: #f4d35e;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #112b57;
+      padding: 20px;
+      text-align: center;
+      color: #a3b1d1;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 500px) {
+      .login-box { padding: 25px; }
+      nav ul { gap: 12px; font-size: 0.9rem; }
+      nav { padding: 14px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Шевченко</div>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="biography.html">Біографія</a></li>
+      <li><a href="poetry.html">Поезія</a></li>
+      <li><a href="art.html">Мистецтво</a></li>
+      <li><a href="memory.html">Пам’ять</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+      <li><a href="comments.html">Коментарі</a></li>
+      <li><a href="login.html" class="active">Увійти</a></li>
+    </ul>
+  </nav>
+
+  <div id="message">✅ Дякуємо за реєстрацію!</div>
+
+  <main>
+    <div class="login-box">
+      <h1>Увійти до акаунту</h1>
+      <form id="login-form">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Ваша електронна пошта" required />
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="Ваш пароль" required />
+
+        <button type="submit">Увійти</button>
+
+        <div class="register-link">
+          Немає акаунту? <a href="#">Зареєструватися</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Тарас Шевченко — Сторінка входу
+  </footer>
+
+  <script>
+    const form = document.getElementById('login-form');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      message.textContent = '✅ Вітаємо! Вхід успішний.';
+      message.style.display = 'block';
+      setTimeout(() => {
+        message.style.display = 'none';
+      }, 4000);
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>

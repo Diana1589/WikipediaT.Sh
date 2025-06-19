@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Поезія — Тарас Шевченко</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0b1d3a;
+      color: #d6e3f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: #112b57;
+      padding: 18px 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f4d35e;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #f4d35e;
+      text-decoration: none;
+    }
+    nav a:hover { color: #ffc107; }
+
+    main {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+  .poem-block {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: #112b57;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+    .poem-block:hover {
+      transform: scale(1.01);
+    }
+
+    .poem-block img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  flex-shrink: 0;
+}
+
+
+    .poem-text {
+      padding: 25px 30px;
+    }
+
+    .poem-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #f4d35e;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #f4d35e44;
+    }
+
+    .poem-body {
+      white-space: pre-line;
+      font-size: 1.1rem;
+      color: #e0ecff;
+      line-height: 1.8;
+    }
+    footer {
+      background-color: #112b57;
+      padding: 24px;
+      text-align: center;
+      color: #a3b1d1;
+      font-size: 0.9rem;
+      box-shadow: inset 0 1px 0 #0a1832;
+    }
+
+    @media (max-width: 700px) {
+      .poem-title { font-size: 1.5rem; }
+      .poem-body { font-size: 1rem; }
+      nav ul { gap: 12px; font-size: 0.9rem; }
+      nav { padding: 14px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Шевченко</div>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="biography.html">Біографія</a></li>
+      <li><a href="poetry.html">Поезія</a></li>
+      <li><a href="art.html">Мистецтво</a></li>
+      <li><a href="memory.html">Пам’ять</a></li>
+   
+      <li><a href="contacts.html">Контакти</a></li>
+      <li><a href="comments.html">Коментарі</a></li>
+      <li><a href="login.html">Увійти</a></li>
+    </ul>
+  </nav>
+
+<main>
+
+  <div class="poem-block">
+    <img src="./3e00362c332ffb92c76522b1a135ec9f.png" alt="Кобзар">
+    <div class="poem-text">
+      <div class="poem-title">Заповіт</div>
+      <div class="poem-body">
+Як умру, то поховайте  
+Мене на могилі,  
+Серед степу широкого,  
+На Вкраїні милій...
+
+Щоб лани широкополі,  
+І Дніпро, і кручі  
+Було видно, було чути,  
+Як реве ревучий...
+      </div>
+    </div>
+  </div>
+
+  <div class="poem-block">
+    <img src="./Шевченко_Т._Г._Катерина._1842.jpg" alt="Катерина">
+    <div class="poem-text">
+      <div class="poem-title">Катерина</div>
+      <div class="poem-body">
+Любітеся, чорнобриві,  
+Та не з москалями,  
+Бо москалі — чужі люди,  
+Роблять лихо з вами...
+      </div>
+    </div>
+  </div>
+
+  <div class="poem-block">
+    <img src="./Lirnik_ukraiński.jpg" alt="Перебендя">
+    <div class="poem-text">
+      <div class="poem-title">Перебендя</div>
+      <div class="poem-body">
+Я — старий та мандрівний  
+Сліпий бандурист,  
+Блукаю по Україні  
+Як вітровій лист...
+      </div>
+    </div>
+  </div>
+
+  <div class="poem-block">
+    <img src="./maxresdefault.jpg" alt="Відгомін">
+    <div class="poem-text">
+      <div class="poem-title">Мені однаково</div>
+      <div class="poem-body">
+Мені однаково, чи буду  
+Я жить в Україні, чи ні.  
+Чи хто згадає, чи забуде  
+Мене в снігу на чужині...
+      </div>
+    </div>
+  </div>
+
+  <div class="poem-block">
+    <img src="./hqdefault.jpg" alt="Шевченко автопортрет">
+    <div class="poem-text">
+      <div class="poem-title">Думи мої, думи мої</div>
+      <div class="poem-body">
+Думи мої, думи мої,  
+Лихо мені з вами!  
+Нащо стали на папері  
+Сумними рядами?
+      </div>
+    </div>
+  </div>
+
+</main>
+
+  <footer>
+    © 2025 Тарас Шевченко — Поезія, що вічно жива
+  </footer>
+
+</body>
+</html>

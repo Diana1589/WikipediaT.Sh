@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Тарас Шевченко — Великий Кобзар України</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #0b1d3a, #112b57);
+      color: #e1e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      line-height: 1.7;
+      padding: 20px 15px 60px;
+    }
+
+    nav {
+      background-color: #0d2758;
+      padding: 18px 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.7);
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    nav .logo {
+      cursor: default;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #f4d35e;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      user-select: none;
+    }
+
+    nav .logo svg {
+      display: block;
+      height: 48px;
+      width: 48px;
+      stroke: #f4d35e;
+      fill: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      font-weight: 600;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #f4d35e;
+      text-decoration: none;
+      transition: color 0.25s ease;
+      padding: 6px 8px;
+      border-radius: 4px;
+    }
+
+    nav a:hover, nav a.active {
+      color: #ffc107;
+      background-color: #1a3a7a;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 70vh;
+    }
+
+    .content-center {
+      max-width: 700px;
+      text-align: center;
+      color: #e1e8f0;
+      font-family: 'Georgia', serif;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .content-center img {
+      max-width: 350px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 4px solid #f4d35e;
+      margin-bottom: 20px;
+    }
+
+    .content-center h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.6rem;
+      color: #f4d35e;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #f4d35eaa;
+    }
+
+    .content-center h2 {
+      color: #ffc107;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+
+    .content-center p {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    footer {
+      width: 100%;
+      background-color: #0d2758;
+      padding: 30px 0;
+      box-shadow: inset 0 1px 0 #071126;
+      user-select: none;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      color: #f4d35e;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    footer a {
+      color: #f4d35e;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffc107;
+    }
+
+    footer .copyright {
+      color: #a3b1d1;
+      font-size: 0.95rem;
+      font-weight: normal;
+      margin-top: 8px;
+    }
+
+    /* Адаптив */
+    @media (max-width: 600px) {
+      main {
+        padding: 20px 10px;
+      }
+      .content-center {
+        font-size: 1rem;
+      }
+      .content-center h1 {
+        font-size: 2.6rem;
+      }
+      .content-center h2 {
+        font-size: 1.4rem;
+      }
+      .content-center img {
+        max-width: 280px;
+      }
+      nav {
+        padding: 14px 20px;
+      }
+      nav ul {
+        gap: 12px;
+        font-size: 0.9rem;
+      }
+      nav .logo svg {
+        height: 36px;
+        width: 36px;
+      }
+      nav .logo {
+        font-size: 1.4rem;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo" aria-label="Логотип Тараса Шевченка">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="false" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <circle cx="32" cy="32" r="30" />
+        <path d="M20 44 L32 20 L44 44" />  
+        <path d="M26 36 L38 36" />          
+        <path d="M32 44 L32 24" />        
+      </svg>
+      Шевченко
+    </div>
+    <ul>
+      <li><a href="index.html" class="active">Головна</a></li>
+      <li><a href="biography.html">Біографія</a></li>
+      <li><a href="poetry.html">Поезія</a></li>
+      <li><a href="art.html">Мистецтво</a></li>
+      <li><a href="memory.html">Пам’ять</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+      <li><a href="comments.html">Коментарі</a></li>
+      <li><a href="login.html">Увійти</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="content-center" aria-label="Портрет і опис Тараса Шевченка">
+      <img src="./Taras_Shevchenko_selfportrait_oil_1840-2.jpg" alt="Портрет Тараса Шевченка" />
+      <h1>Великий Кобзар України</h1>
+      <p>
+        Тарас Шевченко — це не просто поет і художник. Це символ національного відродження, голос пригноблених та натхнення для майбутніх поколінь. Його творчість пронизана любов’ю до рідної землі, боротьбою за свободу та гідність українського народу.
+      </p>
+      <p>
+        Народившись у кріпацькій сім'ї, Шевченко подолав безліч труднощів, щоб стати великим митцем і літератором. Його поезія торкається найглибших струн душі, відображаючи трагедії й надії України.
+      </p>
+      <p>
+        Він малював і писав, відображаючи у своїх творах красу і страждання рідного краю. Його спадщина — це скарбниця української культури, що досі надихає й об’єднує.
+      </p>
+      <h2>Чому він важливий для України?</h2>
+      <p>
+        Шевченко став символом боротьби за національне самовизначення, волю і справедливість. Його слова і досі живуть у серцях українців, нагадуючи про важливість пам’яті та гідності.
+      </p>
+      <p>
+        Кожне покоління відкриває для себе нові грані його творчості, а ім’я Тараса Шевченка — це ім’я, яке єднає мільйони в єдиній любові до України.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contacts">
+      📞 <a href="tel:+380441234567">+380 44 123 45 67</a> &nbsp; | &nbsp;
+      📧 <a href="mailto:info@shevchenko.ua">info@shevchenko.ua</a> &nbsp; | &nbsp;
+      📍 Київ, Україна
+    </div>
+    <div class="copyright">© 2025 Тарас Шевченко — Сайт, присвячений життю і творчості</div>
+  </footer>
+
+</body>
+</html>

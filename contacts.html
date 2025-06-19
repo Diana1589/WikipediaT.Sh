@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакти — Тарас Шевченко</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0b1d3a;
+      color: #d6e3f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: #112b57;
+      padding: 18px 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+    }
+    nav .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f4d35e;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #f4d35e;
+      text-decoration: none;
+    }
+    nav a:hover { color: #ffc107; }
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #f4d35e;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .contacts-info {
+      background-color: #112b57;
+      padding: 30px;
+      border-radius: 14px;
+      margin-bottom: 40px;
+    }
+
+    .contacts-info p {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .contacts-info span {
+      color: #f4d35e;
+      font-weight: bold;
+    }
+
+    form {
+      background-color: #112b57;
+      padding: 25px 30px;
+      border-radius: 14px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px 14px;
+      margin-top: 6px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1b3969;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #f4d35e;
+      color: #0b1d3a;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffc107;
+    }
+
+    footer {
+      background-color: #112b57;
+      padding: 20px;
+      text-align: center;
+      color: #a3b1d1;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      nav ul { gap: 12px; font-size: 0.9rem; }
+      nav { padding: 14px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Шевченко</div>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="biography.html">Біографія</a></li>
+      <li><a href="poetry.html">Поезія</a></li>
+      <li><a href="art.html">Мистецтво</a></li>
+      <li><a href="memory.html">Пам’ять</a></li>
+      
+      <li><a href="contacts.html">Контакти</a></li>
+      <li><a href="comments.html">Коментарі</a></li>
+      <li><a href="login.html">Увійти</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Зв'яжіться з нами</h1>
+
+    <div class="contacts-info">
+      <p><span>📍 Адреса:</span> вул. Кобзарська, 9, Київ, Україна</p>
+      <p><span>📧 Email:</span> info@shevchenko.ua</p>
+      <p><span>📞 Телефон:</span> +380 44 123 45 67</p>
+      <p><span>🕒 Години роботи:</span> Пн–Пт: 9:00–18:00</p>
+    </div>
+
+    <form id="contactForm">
+      <label for="name">Ваше ім’я</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Електронна пошта</label>
+      <inpu

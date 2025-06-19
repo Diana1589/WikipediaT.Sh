@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Мистецтво — Тарас Шевченко</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0b1d3a;
+      color: #d6e3f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+    nav {
+      background-color: #112b57;
+      padding: 18px 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+    }
+    nav .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f4d35e;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #f4d35e;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #ffc107;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 60px auto 80px;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #f4d35e;
+      margin-bottom: 30px;
+      text-align: center;
+      text-shadow: 0 0 12px #f4d35e88;
+    }
+
+    .intro-text {
+      font-size: 1.15rem;
+      color: #c7d1e3;
+      text-align: justify;
+      margin-bottom: 35px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+   .gallery-item img {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+    .gallery-item .caption {
+      padding: 12px 15px;
+      color: #f4d35e;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+      user-select: none;
+    }
+
+    footer {
+      background-color: #112b57;
+      padding: 20px 35px;
+      text-align: center;
+      color: #a3b1d1;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+      .gallery {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+      }
+      .gallery-item {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Шевченко</div>
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="biography.html">Біографія</a></li>
+      <li><a href="poetry.html">Поезія</a></li>
+      <li><a href="art.html">Мистецтво</a></li>
+      <li><a href="memory.html">Пам’ять</a></li>
+     <li><a href="contacts.html">Контакти</a></li>
+      <li><a href="comments.html">Коментарі</a></li>
+      <li><a href="login.html">Увійти</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Мистецтво Тараса Шевченка</h1>
+
+    <p class="intro-text">
+      Тарас Шевченко був не лише великим поетом, а й талановитим художником. Його живопис, гравюри та малюнки відображають дух епохи, глибокі переживання та прагнення до свободи. Представляємо деякі з його найвідоміших творів.
+    </p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="1d32cb7938b69ea6cb3abe104b8d2c02.jpg" alt="Автопортрет Тараса Шевченка" />
+        <div class="caption">Автопортрет (1840)</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./images (4).jpg"alt="Катерина (1842)" />
+        <div class="caption">Катерина (1842)</div>
+      </div>
+      <div class="gallery-item">
+        <img src="./Шевченко_Т._Г._(1843)_Селянська_родина.jpg" alt="Голодний квадрат (1843)" />
+        <div class="caption">Голодний квадрат (1843)</div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2025 Тарас Шевченко — Мистецтво і творчість
+  </footer>
+
+</body>
+</html>
